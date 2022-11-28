@@ -16,7 +16,7 @@ url = 'https://profile.intra.42.fr/'
 chrome_path = 'open -a /Applications/Google\ Chrome.app %s'
 webbrowser.get(chrome_path).open(url)
 
-time.sleep(3)
+time.sleep(2)
 
 pyautogui.moveTo(1340, 140)
 pyautogui.click() # profile
@@ -53,7 +53,8 @@ def get_idx(time, set):
 	elif set == 1:
 		i = (int(time[:2]) * 4 + (int(time[3:]) / 15)) - 24
 	elif set == 2:
-		i = (int(time[:2]) * 4 + (int(time[3:]) / 15)) - 56
+		i = (int(time[:2]) * 4 + (int(time[3:]) / 15)) - 54
+	print(i)
 	return i
 
 def x_axis_gen(set):
@@ -93,6 +94,7 @@ def set_x_axis(start_time, end_time):
 
 y_axis = set_y_axis(day)
 x_axis_s, x_axis_e = set_x_axis(start_time, end_time)
+print(x_axis_s, x_axis_e)
 
 
 
